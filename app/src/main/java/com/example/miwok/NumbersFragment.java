@@ -52,8 +52,7 @@ public class NumbersFragment extends Fragment {
     public NumbersFragment() {
         // Required empty public constructor
     }
-
-
+    
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // inflating words_list.xml to be returned upon method call
