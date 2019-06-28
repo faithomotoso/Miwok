@@ -1,5 +1,6 @@
 package com.example.miwok;
 
+import android.content.Context;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -14,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     private ViewPager mViewPager;
     private PagerAdapter mPagerAdapter;
     private final int NUM_PAGES = 4;
+    private Context mContext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
     private class ScreenSlidePagerAdapter extends FragmentStatePagerAdapter{
         public ScreenSlidePagerAdapter (FragmentManager fragmentManager){
             super(fragmentManager);
+            mContext = getApplicationContext();
         }
 
         @Override
@@ -51,7 +54,10 @@ public class MainActivity extends AppCompatActivity {
         @Nullable
         @Override
         public CharSequence getPageTitle(int position) {
-            String pageTitles[] = new String[] {"Numbers", "Family", "Colors", "Phrases"};
+            String pageTitles[] = new String[] {getString(R.string.category_numbers),
+                    getString(R.string.category_family),
+                    getString(R.string.category_colors),
+                    getString(R.string.category_phrases)};
             return pageTitles[position];
         }
     }
