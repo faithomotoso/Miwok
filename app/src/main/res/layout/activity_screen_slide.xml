@@ -12,8 +12,9 @@
         app:tabMode="fixed"
         app:tabGravity="fill"
         app:tabMaxWidth="0dp"
+        app:tabSelectedTextColor="@android:color/white"
         app:tabBackground="@color/primary_color"
-        app:tabTextColor="@android:color/white">
+        app:tabTextColor="#A8A19E">
 
     </android.support.design.widget.TabLayout>
 
